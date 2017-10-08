@@ -1,0 +1,28 @@
+\mode<presentation>
+
+% Title page
+\defbeamertemplate*{title page}{lncc}[1][]
+{ 
+ 	\vskip0.5cm
+ 	\centering
+ 	\begin{tikzpicture}
+    \node [fill=lncc-color, opacity=1.0,rounded corners=5pt,minimum size=2cm, text=white] 
+    {\LARGE\inserttitle\par};
+	\end{tikzpicture}
+    \vskip1.0cm%
+      {\usebeamerfont{author}\textcolor{lncc-color}{\insertauthor}}%
+     \vskip0.2cm%
+      {\usebeamerfont{institute}\textcolor{lncc-color}{\insertinstitute}}%
+      \vskip0.4cm%
+      {\usebeamerfont{date}\textcolor{lncc-color}{\insertdate}}%
+      \vskip1.2cm
+      \includegraphics[scale=0.25]{./logos/lncc.png}
+  \vfill
+}
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\mode
+<all>
