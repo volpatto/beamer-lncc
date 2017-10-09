@@ -6,16 +6,18 @@
  	\vskip0.5cm
  	\centering
  	\begin{tikzpicture}
-    \node [fill=lncc-color, opacity=1.0,rounded corners=5pt,minimum size=2cm, text=white] 
-    {\centering\LARGE\inserttitle\par};
+    \node [fill=lncc-color, opacity=1.0,rounded corners=5pt,
+    		minimum size=2cm,
+    		text=white, text width=10cm, align=center] 
+    {\Large\textbf{\inserttitle} \\[0.5em] {\large\insertsubtitle}};
 	\end{tikzpicture}
     \vskip1.0cm%
       {\usebeamerfont{author}\textcolor{lncc-color}{\insertauthor}}%
-     \vskip0.2cm%
+     \vskip0.1cm%
       {\usebeamerfont{institute}\textcolor{lncc-color}{\insertinstitute}}%
-      \vskip0.4cm%
+      \vfill
       {\usebeamerfont{date}\textcolor{lncc-color}{\insertdate}}%
-      \vskip1.2cm
+	  \vfill
       \includegraphics[scale=0.25]{./logos/lncc.png}
   \vfill
 }
