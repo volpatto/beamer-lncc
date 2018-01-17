@@ -8,12 +8,16 @@
   \useasboundingbox[fill=white](0.0,0) rectangle(\the\paperwidth,1.3);
   \fill[lncc-color] (0.0,0.2) rectangle(10.6,1.3);
   {\node[anchor=south] at (11.7,0.15) {\includegraphics[scale=0.15]{./logos/lncc.png}};}
-   \ifx\insertframesubtitle\@empty%
+   \ifx\insertframetitle\@empty%
+      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\null};}
+   \else%
+	  \ifx\insertframesubtitle\@empty%
       {\node[anchor=west, white,font=\Large] at (0.0,0.7){\insertframetitle};}
       \else%
       {\node[anchor= west, white,font=\large] at (0.0,0.9){\insertframetitle};%
        \node[anchor= west, white,font=\small] at (0.0,0.45){\insertframesubtitle};}%
       \fi;
+   \fi;
   \end{tikzpicture}
   \end{beamercolorbox}
 }
