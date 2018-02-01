@@ -10,6 +10,7 @@
   {\node[anchor=south] at (11.7,0.15) {\includegraphics[scale=0.15]{./logos/lncc.png}};}
    \ifx\insertframetitle\@empty%
       {\node[anchor=west, white,font=\Large] at (0.0,0.7){\null};}
+%      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\insertsectionhead};}
    \else%
 	  \ifx\insertframesubtitle\@empty%
       {\node[anchor=west, white,font=\Large] at (0.0,0.7){\insertframetitle};}
@@ -18,6 +19,21 @@
        \node[anchor= west, white,font=\small] at (0.0,0.45){\insertframesubtitle};}%
       \fi;
    \fi;
+%   \ifx\insertframetitle\@empty%
+%      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\null};}
+%      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\insertsectionhead};}
+%      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\secname};}
+%%   \else%
+%	  \ifx\insertframesubtitle\@empty%
+%%      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\insertsectionhead};}
+%      {\node[anchor=west, white,font=\Large] at (0.0,0.7){\secname};}
+%      \else%
+%%      {\node[anchor= west, white,font=\large] at (0.0,0.9){\insertsectionhead};%
+%%       \node[anchor= west, white,font=\small] at (0.0,0.45){\insertsubsectionhead};}%
+%      {\node[anchor= west, white,font=\large] at (0.0,0.9){\secname};%
+%       \node[anchor= west, white,font=\small] at (0.0,0.45){\secname};}%
+%      \fi;
+%   \fi;
   \end{tikzpicture}
   \end{beamercolorbox}
 }
@@ -30,7 +46,7 @@
   \begin{tikzpicture}
   \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
   \fill[lncc-color!40] (0,0) rectangle(1.15,1.2);
-  {\node[anchor=west,white,font=\Huge] at (0.2,0.6){\thesection\par};}
+  {\node[anchor=west,white,font=\Huge] at (0.15,0.6){\thesection\par};}
   \fill[lncc-color] (1.25,0) rectangle(\the\paperwidth,1.2);
   {\node[anchor=west,white,font=\Large] at (1.8,0.6){\insertsectionhead\par};}
   \end{tikzpicture}
